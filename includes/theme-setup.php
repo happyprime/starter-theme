@@ -9,6 +9,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\set_content_width', 0 );
 add_action( 'widgets_init', __NAMESPACE__ . '\widgets_init' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\remove_core_block_library_styles', 9999 );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -132,4 +133,16 @@ function enqueue_assets() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+}
+
+/**
+ * Disable the default block library styles provided by WordPress and/or
+ * the Gutenberg plugin.
+ *
+ * Instead, these styles are included as part of the theme to allow for a
+ * bit of pick and choose. See css/wp-block-library-5.5.1.css in this repo.
+ */
+function remove_core_block_library_styles() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_deregister_style( 'wp-block-library' );
 }
