@@ -3,12 +3,11 @@
 	"version": "0.0.1",
 	"description": "A WordPress theme used as a starter for Happy Prime projects",
 	"devDependencies": {
-		"autoprefixer": "^10.0.0",
-		"postcss": "^8.0.7",
-		"postcss-cli": "^8.0.0",
+		"autoprefixer": "^9.8.6",
+		"postcss": "^7.0.32",
+		"postcss-cli": "^7.1.2",
 		"postcss-custom-media": "^7.0.8",
 		"postcss-import": "^12.0.1",
-		"precss": "^4.0.0",
 		"stylelint": "^13.7.1",
 		"stylelint-config-wordpress": "^17.0.0"
 	},

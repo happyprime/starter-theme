@@ -5,7 +5,6 @@ module.exports = {
 				require("stylelint"),
 			  ],
 		},
-		'precss': {},
 		'autoprefixer': {},
 		'postcss-custom-media': {},
 	}
