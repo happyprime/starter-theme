@@ -125,10 +125,21 @@ function widgets_init() {
  * Enqueue scripts and styles.
  */
 function enqueue_assets() {
-	wp_enqueue_style( 'themeprefix-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style(
+		'themeprefix-style',
+		get_stylesheet_uri(),
+		array(),
+		\ThemeMainNamespace\Utilities\get_version()
+	);
 	wp_style_add_data( 'themeprefix-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'themeprefix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script(
+		'themeprefix-navigation',
+		get_template_directory_uri() . '/js/navigation.js',
+		array(),
+		\ThemeMainNamespace\Utilities\get_version(),
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
