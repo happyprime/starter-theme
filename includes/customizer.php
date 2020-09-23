@@ -40,7 +40,13 @@ function customize_register( $wp_customize ) {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function customize_preview_js() {
-	wp_enqueue_script( 'themeprefix-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script(
+		'themeprefix-customizer',
+		get_template_directory_uri() . '/js/customizer.js',
+		array( 'customize-preview' ),
+		\ThemeMainNamespace\Utilities\get_version(),
+		true
+	);
 }
 
 /**
