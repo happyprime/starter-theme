@@ -1,27 +1,15 @@
-/*
- Theme Name:   Starter Theme
- Theme URI:    https://github.com/happyprime/starter-theme
- Description:  A Happy Prime starter theme.
- Author:       Happy Prime
- Author URI:   https://happyprime.co
- Version:      0.0.1
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-*/
 
 /**
  * From https://github.com/hankchizljaw/modern-css-reset
  */
 
 /* Remove default padding */
-
 ul,
 ol {
 	padding: 0;
 }
 
 /* Remove default margin */
-
 body,
 h1,
 h2,
@@ -40,7 +28,6 @@ dd {
 }
 
 /* Set core body defaults */
-
 body {
 	box-sizing: border-box;
 	line-height: 1.55;
@@ -50,7 +37,6 @@ body {
 }
 
 /* Box sizing rules */
-
 *,
 *::before,
 *::after {
@@ -58,14 +44,11 @@ body {
 }
 
 /* A elements that don't have a class get default styles */
-
 a:not([class]) {
-	-webkit-text-decoration-skip: ink;
-	        text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
-
 img {
 	display: block;
 	height: auto;
@@ -73,7 +56,6 @@ img {
 }
 
 /* Inherit fonts for inputs and buttons */
-
 input,
 button,
 textarea,
@@ -82,21 +64,17 @@ select {
 }
 
 /* Remove, if preference, all animations and transitions */
-
 @media (prefers-reduced-motion: reduce) {
 
 	* {
-		-webkit-animation-duration: 0.01ms !important;
-		        animation-duration: 0.01ms !important;
-		-webkit-animation-iteration-count: 1 !important;
-		        animation-iteration-count: 1 !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
 		scroll-behavior: auto !important;
 		transition-duration: 0.01ms !important;
 	}
 }
 
 /* Wrap pre tag content */
-
 pre {
 	overflow-x: auto;
 	white-space: pre-wrap;
